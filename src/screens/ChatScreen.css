@@ -1,0 +1,16 @@
+.chat{
+    height: 100vh;
+    background-color: #FAFAFA;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.chat_body{
+    /* margin-top: -50px; */
+    margin-bottom: -50px;
+    height: 90vh;
+    width: 1000px;
+    background-color: red;
+
+}

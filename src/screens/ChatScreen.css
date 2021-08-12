@@ -11,6 +11,7 @@
     margin-bottom: -50px;
     height: 90vh;
     width: 1000px;
-    background-color: red;
+    background-color: #fff;
+    display: flex;
 
 }

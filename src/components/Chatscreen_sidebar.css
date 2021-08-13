@@ -1,33 +1,41 @@
-.sidebar{
-    display: flex;
-    flex-direction: column;
-    flex: .35;
-    border-right: solid 1px lightgrey ;
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  flex: 0.35;
+  border-right: solid 1px lightgrey;
 }
-.sidebar_header{
-    display: flex;
-    justify-content: space-between;
-    padding: 20px;
-    align-items: center;
-    border-bottom: 1px solid lightgrey;
- 
+.sidebar_header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  border-bottom: 1px solid lightgrey;
 }
-.sidebar_search{
-    display: flex;
-    align-items: center;
-    padding: 10px;
-    padding-top: 15px;
-    border-bottom: lightgrey solid 1px;
-    height: 36px;
-    
+.sidebar_search {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-top: 15px;
+  border-bottom: lightgrey solid 1px;
+  height: 36px;
 }
-.sidebar_search> .MuiSvgIcon-root{
-    margin-left: 15px;
-margin-right: 15px;
-color: lightgrey !important;
-} 
-.sidebar_search>input{
-    outline: none;
-    border: none;
-    /* height: 20px; */
+.sidebar_search > .MuiSvgIcon-root {
+  margin-left: 15px;
+  margin-right: 15px;
+  color: lightgrey !important;
+}
+.sidebar_search > input {
+  outline: none;
+  border: none;
+  /* height: 20px; */
+}
+.sidebar_chat {
+  /* background-color: red; */
+  flex: 1;
+  overflow-y: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.sidebar_chat::-webkit-scrollbar {
+  display: none;
 }

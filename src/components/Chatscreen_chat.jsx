@@ -1,17 +1,27 @@
 import { Avatar, IconButton } from "@material-ui/core";
 import { AttachFile, InsertEmoticon, Mic, MoreVert, SearchOutlined } from "@material-ui/icons";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
+import { useParams } from "react-router-dom";
+import { db } from "../firebase";
 import "./Chatscreen_chat.css";
 function Chatscreen_chat() {
     const [input , setinput]= useState("")
+    const [roomname , setroomname]= useState("")
+    const{roomid}=useParams()
+    useEffect(()=>{
+      if(roomid){
+        db.collection("rooms").doc(roomid).onSnapshot(snap=>setroomname(snap.data().name))
+      }
+
+    },[roomid])
     const sendmessage=(e)=>{
         e.preventDefault()
-        // console.log(input)
         setinput("")
         
 
     }
+
   return (
     <div className="chatscreen_chat">
       <div className="chatscreen_header">
@@ -19,7 +29,7 @@ function Chatscreen_chat() {
           <Avatar />
         </IconButton>
         <div className="chat_headerinfo">
-          <h2>sendername</h2>
+          <h2>{roomname}</h2>
           <p>last seen...</p>
         </div>
         <div className="chat_headerright">

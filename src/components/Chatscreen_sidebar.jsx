@@ -4,6 +4,7 @@ import { Avatar, IconButton } from "@material-ui/core";
 import { SearchOutlined } from "@material-ui/icons";
 import Sidebarchats from "../Componentsofcomponents/Sidebarchats";
 import { db } from "../firebase";
+import {Link } from "react-router-dom"
 function Chatscreen_sidebar() {
   const [rooms, setrooms] = useState([]);
   useEffect(() => {
@@ -13,7 +14,7 @@ function Chatscreen_sidebar() {
         data:doc.data()
     }))))
   }, []);
-console.log(rooms)
+// console.log(rooms)
 
   return (
     <div className="sidebar">

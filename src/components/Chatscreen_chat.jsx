@@ -45,14 +45,14 @@ function Chatscreen_chat() {
         </div>
       </div>
       <div className="chatscreen_body">
-          i am the chat body
+          Body of the chat
       </div>
       <div className="chatscreen_footer">
          
           <InsertEmoticon/>
           <form>
           <input value={input} onChange={(e)=>{setinput(e.target.value)}} placeholder="Message..." type="text" />
-          <button type="submit"  onClick={sendmessage}>send a message</button>
+          <button type="submit"  onClick={sendmessage}>Send a message</button>
           </form>
           <Mic/>
 
